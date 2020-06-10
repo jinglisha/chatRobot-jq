@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    height:100%;
+}
+.wrapper{
+    width: 600px;
+    height: 100%;
+    background-color: #eee;
+    margin: 0 auto;
+}
+.header {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: grey;
+    color: #fff;
+}
+.contain {
+    height:calc(100% - 40px - 50px);
+    overflow-y:auto;
+
+}
+.input-box {
+    height: 50px;
+    line-height: 50px;
+    background-color: #ddd;
+    text-align: center;
+}
+.mine, .robot {
+    margin: 5px;
+}
+.avator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+}
+.mine .avator {
+    float: right;
+    margin-left:5px;
+    background-image: url('./image/3.png');
+}
+.robot .avator {
+    float: left;
+    margin-right:5px;
+    background-image: url('./image/dog1.jpg');
+}
+.mine {
+    float: right;
+    width: 500px;
+}
+.robot {
+    float: left;
+    width: 500px;
+}
+.mine .text {
+    float: right;
+    background-color: greenyellow;
+}
+.robot .text {
+    float: left;
+    background-color: #fff;
+}
+.text {
+    max-width: 300px;
+    padding: 0 5px;
+    line-height: 30px;
+    border-radius: 5px;
+    word-wrap: break-word; 
+}
+.input-box #send-text {
+    padding:0 5px;
+    width: 500px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+#send-btn {
+    padding: 3px 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    background-color: #ccc;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+}
+#send-btn:hover {
+    background-color: #aaa;
+}

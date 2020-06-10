@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq之ajax</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- 
+        1. jq中的ajax的使用
+        2. 聊天机器人的界面
+
+        三次握手：（建立连接的过程）
+            为了确定客户端和服务器端均有接收和发送信息的能力
+            1. 我要给你写情书了 你能收到吗  （确定客户端有发送信息的能力）
+            2. 我知道你要给我写情书了   我能收到   （确定服务器端有接收和发送信息的能力）
+            3. 我知道你能收到信息了  我也能收到信息  那我现在开始发给你我的心意
+        四次挥手： （断开连接）
+            1. 客户端向服务器端发出  我这边的情书已经发完了  我要断开了
+            2. 服务器端向客户端发出  我知道你已经发完了  但是我这边还没有接收完 也没有给你写完回信
+            3. 服务器端向客户端发出  我这边已经写完回信并发完了  可以断开了
+            4. 客户端向服务器端发出  我知道你已经发送完了  我断开了
+
+            duing  
+     -->
+     <div class="wrapper">
+         <div class="header">小渡机器人</div>
+         <div class="contain">
+            <div class="mine">
+                <div class="avator"></div>
+                <div class="text">你好呀</div>
+            </div>
+            <div class="robot">
+                <div class="avator"></div>
+                <div class="text">你好呀</div>
+            </div>
+         </div>
+         <div class="input-box">
+            <input type="text" id="send-text">
+            <button id="send-btn">发送</button>
+         </div>
+     </div>
+     <script src="./jquery-3.3.1.js"></script>
+     <script src="./index.js"></script>
+     <script>
+        //  function aa(res) {
+        //      console.log(res)
+        //  }
+        //  aa({})
+        //  $.ajax({
+        //     //  请求方式
+        //     type: 'get',
+        //     url: 'http://open.duyiedu.com/api/student/findAll',
+        //     data: {
+        //         appkey: 'DuYimeiqi_1564986205860',
+        //         // callback: 'aa'
+        //     },
+        //     // 希望拿到的数据类型是什么样的  json代表的是json对象的格式
+        //     // jsonp  代表当前请求为jsonp的请求而不是ajax请求
+        //     // dataType: 'jsonp',
+        //     // jsonp: 'callback',
+        //     // jsonpCallback: 'aa',
+        //     // 数据在传递的过程当中数据的编码格式是怎样的  
+        //     // application/x-www-form-urlencoded： key=value&key1=value1  
+        //     // application/json   在数据的传递过程当中数据编码格式为json字符串格式的
+        //     // contentType: 'application/x-www-form-urlencoded',
+        //     // 数据发出之前的拦截  拦截器的功能
+        //     // beforeSend: function (xhr, data) {
+        //     //     console.log(xhr, data)
+        //     //     // return false  终止网络请求
+        //     //     return false;
+        //     // },
+        //     success: function (res) {
+        //         console.log('success', res)
+        //     },
+        //     // 当前请求失败触发的回调函数
+        //     error: function (res) {
+        //         console.log('error', res)
+        //     },
+        //     complete: function (res) {
+        //         console.log('complete', res)
+        //     }
+        //  })
+     </script>
+</body>
+</html>
